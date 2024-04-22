@@ -11,11 +11,14 @@ export const connectToDB = async () => {
   }
 
   try {
-    await mongoose.connect(process.env.MONGODB_URI, {
-      dbName: "share_prompt",
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(
+      "mongodb+srv://moorza:mtfaqRrqQLij9tyQ@promptopia.weiratk.mongodb.net/?retryWrites=true&w=majority&appName=promptopia",
+      {
+        dbName: "share_prompt",
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      }
+    );
 
     isConnected = true;
 
